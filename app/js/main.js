@@ -334,7 +334,7 @@ $(document).ready(function() {
 			var pageOffset = window.pageYOffset;
 			var heroHeight = hero.height()+parseInt(hero.css("padding-top"));
 			var animRange = heroHeight;
-			var animParalax = -50;
+			var animParalax = -70;
 			var offset = animRange - pageOffset;
 			var translate_offset = ((offset / animRange) - 1) * animParalax;
 
