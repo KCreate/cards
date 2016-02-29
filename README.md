@@ -1,0 +1,2 @@
+# leonardschuetz.ch
+Personal Homepage
