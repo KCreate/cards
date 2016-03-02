@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 // colors
-$color_theme_dark: #3f51b6;
+$color_theme_dark: #3b69cc;
 $color_background_content: #f2f2f2;
 $color_background_card: #ffffff;
 $color_background_blockquote: $color_background_content;
@@ -40,8 +40,8 @@ $breakpoint_max_mobile: 570px;
 $breakpoint_min_expanded: 1600px;
 
 // misc
-$shadow_card:   0 4px 5px 0 rgba(0, 0, 0, 0.14),
-                0 1px 10px 0 rgba(0, 0, 0, 0.12),
+$shadow_card:   0 3px 4px 0 rgba(0, 0, 0, 0.14),
+                0 1px 8px 0 rgba(0, 0, 0, 0.14),
                 0 1px 3px -1px rgba(0, 0, 0, 0.4);
 
 // styles
