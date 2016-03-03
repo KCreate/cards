@@ -60,7 +60,6 @@ require_once('api.php');
                     ws.onmessage = function(data) {
                         data = JSON.parse(data.data);
                         var message = data.message;
-
                         var time = new Date().toLocaleString('en-US', {
                             hour12: false
                         }).split(' ')[1];

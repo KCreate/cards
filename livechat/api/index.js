@@ -21,9 +21,6 @@ var WebSocketServer = require('ws').Server, ws = new WebSocketServer({
 
 var chatrooms = {};
 ws.on('connection', function(conn) { 
-    
-    console.log(chatrooms);
-
     conn.on('message', function(data) {
 
         // Convert to JSON
@@ -46,6 +43,8 @@ ws.on('connection', function(conn) {
         if (alreadyRegistered.length == 0) {
             if (data.chatroom) {
                 chatrooms[data.chatroom].push({
+                clients.push({
+                    chatroom: data.chatroom,
                     key: conn.upgradeReq.headers['sec-websocket-key']
                 });
             }
@@ -66,7 +65,6 @@ ws.on('connection', function(conn) {
 
                     // Check if the client is in the right chatroom
                     if (clientInChatroom.length != 0) {
-                        
                         // Check if the clientConnection is open
                         if (clientConnection.readyState == 1) {
                             
