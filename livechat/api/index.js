@@ -43,8 +43,6 @@ ws.on('connection', function(conn) {
         if (alreadyRegistered.length == 0) {
             if (data.chatroom) {
                 chatrooms[data.chatroom].push({
-                clients.push({
-                    chatroom: data.chatroom,
                     key: conn.upgradeReq.headers['sec-websocket-key']
                 });
             }
