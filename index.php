@@ -14,8 +14,6 @@ require_once('app/php/main.php');
                 <h1></h1>
             </div>
             <ul>
-                <li><a id="blog" href="#blog">Blog</a></li>
-                <li><a id="projects" href="#projects">Projects</a></li>
                 <li><a id="about" href="#about">About</a></li>
             </ul>
         </div>

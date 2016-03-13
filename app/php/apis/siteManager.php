@@ -29,8 +29,8 @@ class siteManager
 	}
 
 	public function get_prefix() {
-                $server_name = $_SERVER['SERVER_NAME'];
-                $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        $server_name = $_SERVER['SERVER_NAME'];
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 		return $protocol.$server_name."/";
 	}
 

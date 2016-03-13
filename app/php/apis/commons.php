@@ -3,6 +3,7 @@
     Overly simple login system, not meant to be taken seriously
 */
 function login($p) {
+    // Place the password hash here
     return password_verify($p, '$2y$14$u19ti7nzFsB0no6WM544s.5Nl7I6g24xQrBtGRbuRyNIOnEaWyFL6');
 }
 /*
@@ -12,23 +13,6 @@ function str_contains($search, $text) {
 	//Return false if $text doesn't contain $search
 	$strpos = strpos($text, $search);
 	return ($strpos !== false ? true : false);
-}
-
-/*
-	Returns the contents of a file in json format
-*/
-function jsonForFile($path) {
-	if (file_exists($path)) {
-		$file = file_get_contents($path);
-		$file = trim($file);
-		$json = json_decode($file, true);
-		if ($json === NULL) {
-			return false;
-		}
-		return $json;
-	} else {
-		return false;
-	}
 }
 
 /*

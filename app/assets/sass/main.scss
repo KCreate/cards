@@ -24,7 +24,7 @@ $size_hero_height_mobile: 115px;
 $size_hero_height_expanded: 275px;
 $size_hero_tpadding: 20px;
 $size_hero_tpadding_mobile: 10px;
-$size_borderradius: 3px;
+$size_borderradius: 4px;
 $size_borderradius_small: 2px;
 $size_card_padding: 8px 16px 16px 16px;
 $size_content_transform: -70px;
@@ -40,9 +40,10 @@ $breakpoint_max_mobile: 570px;
 $breakpoint_min_expanded: 1600px;
 
 // misc
-$shadow_card:   0 3px 4px 0 rgba(0, 0, 0, 0.14),
-                0 1px 8px 0 rgba(0, 0, 0, 0.14),
-                0 1px 3px -1px rgba(0, 0, 0, 0.4);
+$shadow_card:   0 2px 3px 0 rgba(0,0,0,.24),
+                0px 2px 6px 0 rgba(0,0,0,.14),
+                0px 1px 2px -1px rgba(0,0,0,.4),
+                inset 0px -1px 3px rgba(0,0,0,0.10)
 
 // styles
 
@@ -203,6 +204,7 @@ body {
                             opacity $transition_duration_long $transition_curve,
                             transform $transition_duration_long $transition_curve;
                 will-change: transform, opacity;
+
                 > * {
                     margin: 16px 0;
                     font-size: 18px;
@@ -212,9 +214,15 @@ body {
                     border-radius: $size_borderradius_small;
                 }
 
-                *[borderleft] {
+                h1,h2,h3,h4,h5,h6 {
                     padding-left: 8px !important;
                     border-left: 4px solid $color_theme_dark;
+                }
+
+                *[noborder] {
+                    padding: $size_card_padding;
+                    padding-left: 0 !important;
+                    border-left: none;
                 }
 
                 .highlight {
@@ -233,9 +241,10 @@ body {
                         color: $color_theme_dark;
                         font-size: 0.8em;
                         transition: font $transition_duration_long $transition_curve;
+                        display: block;
 
-                        &.subtitle_lower {
-                            display: block;
+                        &.subtitle_higher {
+                            display: inline;
                         }
 
                         @media all and (max-width: $breakpoint_max_mobile) {

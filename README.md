@@ -1,4 +1,2 @@
-# leonardschuetz.ch
-Personal Homepage
-
-Please don't judge my code, i wrote most of it 1-2 years ago...
+# Cards
+Cards is a little, opiniated CMS written in PHP and Javascript.

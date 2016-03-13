@@ -1,8 +1,5 @@
 robots.txt
 storage/
-app/php/logs/
-node_modules
-vendor/
 *.swp
-composer.lock
-menu/
+node_modules
+.git

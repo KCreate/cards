@@ -1,3 +1,11 @@
+/*
+    Github: https://github.com/rdallasgray/bez
+    Compiled using the google closure-compiler
+*/
+jQuery.extend({bez:function(a,e){var g;g=void 0;jQuery.isArray(a)&&(e=a,a="bez_"+e.join("_").replace(/\./g,"p"));"function"!==typeof jQuery.easing[a]&&(g=function(a,e){var h,f,c,k,g,l;l=g=k=c=f=h=void 0;h=[null,null];f=[null,null];c=[null,null];k=function(d,b){c[b]=3*a[b];f[b]=3*(e[b]-a[b])-c[b];h[b]=1-c[b]-f[b];return d*(c[b]+d*(f[b]+d*h[b]))};g=function(d){return c[0]+d*(2*f[0]+3*h[0]*d)};l=function(d){var b,a,c;a=d;for(b=0;14>++b;){c=k(a,0)-d;if(.001>Math.abs(c))break;a-=c/g(a)}return a};return function(a){return k(l(a),
+1)}},jQuery.easing[a]=function(a,m,h,f,c){return f*g([e[0],e[1]],[e[2],e[3]])(m/c)+h});return a}});
+
+// Main
 $(document).ready(function() {
 	var content = $('#content>div');
 	// get an array of required sites
@@ -16,7 +24,7 @@ $(document).ready(function() {
 		window.history.replaceState('-', '-', "#"+mode);
 	}
 	var inProgress = true;
-	var writeAnimationString = "Leonard Schuetz";
+	var writeAnimationString = "Cards";
 	var herotitle = $("#hero>div>h1");
 	var navbar = $("#hero>ul");
 	var hero = $('#hero');
@@ -159,7 +167,8 @@ $(document).ready(function() {
 				}
 			}, time, i);
 			i += 1;
-			time += rand(40, 60);
+            var max=60, min=40;
+			time += Math.floor(Math.random() * (max - min + 1))+min;
 		});
 	}
 
@@ -350,7 +359,4 @@ $(document).ready(function() {
 	// #critical is the critical css style tag
 	var blacklist = "noscript, #critical, script";
 	$(blacklist).remove();
-
-	// funny message
-	console.log("You like to see how stuff works under the hood right? Feel free to ask me anything about how this site works internally ;)");
 });

@@ -3,63 +3,30 @@
 		"noscript":"<noscript><div><h1 borderleft>Please enable JavaScript</h1><p>The contents of this site, are loaded with javascript.</p><p>If your browser doesn't support JavaScript, or you've disabled it by will, you won't be able to browser my site.</p><p>For the best experience, please use Chrome.</p></div></noscript>"
 	},
 	"css":{
-		"main":"app/assets/css/main.css",
-		"prot-form":"app/assets/css/prot-form.css"
-	},
-	"php":{
-		"main":"app/php/main.php",
-		"serve":"app/php/serve.php",
-		"apis":"app/php/apis/",
-		"siteManager":"app/php/apis/siteManager.php",
-		"commons":"app/php/apis/commons.php",
-		"parsedown":"app/php/apis/parsedown.php"
+		"main":"app/assets/css/main.css"
 	},
 	"presets":{
 		"root":"app/php/presets/",
 		"head":"app/php/presets/head.php",
 		"scripts":"app/php/presets/scripts.php"
 	},
+    "article": {
+        "root": "storage/articles/",
+        "app": "storage/app/"
+    },
 	"javascript":{
 		"jquery":"app/js/tp/jquery.js",
-		"helper":"app/js/helper.js",
 		"cache":"app/js/cache.js",
-		"main":"app/js/main.js",
-		"particle":"app/js/particle.js"
-	},
-	"article":{
-		"blog":"storage/articles/blog/",
-        "editor":"storage/articles/editor/",
-   		"pre-written":"storage/articles/pre-written/",
-		"root":"storage/articles/"
-	},
-	"project":{
-		"manifest":"storage/projects/manifest.json",
-		"root":"storage/projects/"
-	},
-	"stuff":{
-		"manifest":"storage/stuff/manifest.json",
-		"index":"storage/stuff/index.php",
-		"root":"storage/stuff/"
-	},
-	"asset":{
-		"favicon":"favicon.ico",
-		"color-scheme":"app/assets/colors/scheme.json",
-		"particlesjson":"app/assets/particles.json"
+		"main":"app/js/main.js"
 	},
 	"build":{
-		"version":"2.1",
-		"index":"index.php",
-		"documents":"storage/documents/",
-        "stuff":"storage/stuff/",
-		"logs":"app/php/logs/"
-	},
-	"apps":{
-		"root":"app/modules/"
+		"version":"1.0",
+		"documents":"storage/documents/"
 	},
 	"meta":{
-		"title":"Leonard Schütz",
+		"title":"Cards",
 		"author":"Leonard Schütz",
-		"description":"I'm a student and web developer from Switzerland. I currently do an apprenticeship at Siemens as a Programmer and Sysadmin. This is my official homepage.",
+		"description":"Cards CMS",
 		"viewport":"width=device-width, initial-scale=1"
 	}
 }
