@@ -87,7 +87,8 @@ $(document).ready(function() {
 				// request from the server
 				var protocol = window.location.protocol;
 				var hostname = window.location.hostname;
-				var url = protocol+"//"+hostname+"/app/php/serve.php?show="+i;
+                                var pathname = window.location.pathname;
+				var url = protocol+"//"+hostname+pathname"/app/php/serve.php?show="+i;
 
 				var received = false;
 				$.get(url, function(response) {
