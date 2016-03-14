@@ -34,6 +34,30 @@ class siteManager
 		return $protocol.$server_name."/";
 	}
 
+    // Get a static reference to the current directory
+    public function static_reference() {
+        return realpath(__DIR__."/../../../");
+    }
+
+    // Get the path that leads from the document root to the static_reference root
+    public function leading_dir() {
+
+        // Explode the document root
+        $dcroot = explode("/", $_SERVER['DOCUMENT_ROOT']);
+
+        // Explode the static reference
+        $srroot = explode("/", $this->static_reference());
+
+        // Compare the two
+        $path = "";
+        for ($i=0; $i < count($srroot) - count($dcroot); $i++) {
+
+            $path .= $srroot[count($dcroot)+$i];
+        }
+
+        return $path;
+    }
+
 	// get images inside articles
 	public function get_res($resName, $articleName, $category)
 	{
@@ -46,11 +70,11 @@ class siteManager
 	public function get_def($type, $resource, $pathmode = 0)
 	{
 		if (isset($this->SM_DEFINITIONS[$type][$resource])) {
-			if ($pathmode == 2) { // intern
-				$path = $_SERVER['DOCUMENT_ROOT']."/".$this->SM_DEFINITIONS[$type][$resource];
-			} elseif ($pathmode == 1) { // extern
-				$path = $this->get_prefix().$this->SM_DEFINITIONS[$type][$resource];
-			} else { // plain
+			if ($pathmode == 2) { // Internal links, includes filesystem paths
+				$path = $this->static_reference()."/".$this->SM_DEFINITIONS[$type][$resource];
+			} elseif ($pathmode == 1) { // External links
+				$path = $this->get_prefix().$this->leading_dir()."/".$this->SM_DEFINITIONS[$type][$resource];
+			} else { // Print exact value as defined
 				$path = $this->SM_DEFINITIONS[$type][$resource];
 			}
 			return $path;
