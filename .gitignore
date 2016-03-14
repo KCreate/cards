@@ -1,5 +1,4 @@
 robots.txt
-storage/
 *.swp
 node_modules
 .git

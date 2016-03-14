@@ -1,0 +1,54 @@
+<div>
+    <h1>Cards <span>Introduction</span></h1>
+    <p>
+        Congratulations, you've just installed and built Cards. It wasn't that hard right?
+        Cards is a little, opiniated and pretty simplistic content-management-system.
+        The default theme is inspired by Google's Material-Design guidelines with some little changes here and there.
+    </p>
+</div>
+<div>
+    <h1>About the developer</h1>
+    <p>
+        My name is Leonard Schuetz. I was born in 2000 and live in Switzerland.
+        I'm currently doing an apprentice at <a href="https://www.siemens.ch/home/index.php">Siemens Schweiz AG</a>.
+        You can find more about myself on my <a href="https://leonardschuetz.ch/">personal website</a>, also running on a slightly modified version of cards.
+    </p>
+</div>
+<div>
+    <h1>History</h1>
+    <p>
+        Cards started as my own personal homepage. It featured different categories, a simple to use tag parser and a pretty looking design. I quickly thought about making it accessible to anyone.
+        In this version however, i cut out a lot of features that i felt we're unnecessary for the average user.
+    </p>
+    <p>
+        For example, i removed the support for my <a href="https://github.com/KCreate/PTF">own tag parser</a>, which i hadn't updated since September 2015. I also removed a lot of stuff that i built for myself.
+    </p>
+</div>
+<div>
+    <h1>Build</h1>
+    <p>
+        Just launch the setup.php file via the browser or command-line. After everything finished, it will disable itself.
+    </p>
+</div>
+<div>
+    <h1>How to add a new category</h1>
+    <p>
+        Create a new folder inside the <span class="highlight">storage/articles</span> folder and name it after your category.
+    </p>
+</div>
+<div>
+    <h1>How to add a new article</h1>
+    <p>
+        Inside the newly created category folder, create a new folder for your article.
+        PHP sorts these articles based on alphanumeric sorting done by the filesystem, so you should use names similar to this format: <span class="highlight">2016_03_16_sometitle</span>.
+    </p>
+    <p>
+        Next, place a file called <span class="highlight">article.html</span> inside the newly created directory. This will is a standard html file where you can write your article.
+    </p>
+    <p>
+        If you want to embed images, videos or other file-system related stuff, use the following syntax: <span class="highlight">%%THIS%%/image.jpg</span> for the src path.
+    </p>
+    <p>
+        Inside this file, a div represents a card. You can have multiple cards inside one article. Play around with different tags to see how they are being formatted.
+    </p>
+</div>
